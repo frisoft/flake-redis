@@ -1,26 +1,28 @@
-# Run mysql server
+# Run redis server
 
 ```
-nix-shell
+nix run
 ```
+
+From Github
+
+`nix run github:frisoft/flake-redis`
 
 # Stop the server
 
-You need just to close the nix-shell
+```
+nix run .#stop
+```
 
-`exit`
+From Github
+
+`nix run github:frisoft/flake-redis#stop`
 
 # Reset the DB
 
-Before startint the server:
+Before starting the server:
 
 ```
-rm -rf mysql
+rm -f dump.rdb
 ```
-
-
-# Logs
-
-`cat mysql/mysql.log`
-
 
